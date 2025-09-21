@@ -1,4 +1,4 @@
-name: 自动部署 SAP
+name: 自动部署 SAP-直连
 
 on:
   workflow_dispatch:  # 只允许手动触发
@@ -25,7 +25,7 @@ on:
         default: ''
 
 env:
-  DOCKER_IMAGE: ${{ secrets.DOCKER_IMAGE || 'ghcr.io/eooce/nodejs:main' }}
+  DOCKER_IMAGE: ${{ secrets.DOCKER_IMAGE || 'ghcr.io/eooce/ws:latest' }}
   MEMORY: 512M
 
 jobs:
